@@ -1,0 +1,20 @@
+.main {
+    display: flex
+}
+
+.lista-peliculas{
+    margin:20px;
+    border: 1px solid black;
+    padding: 20px;
+}
+
+.pelicula-item {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    padding: 5px;
+  }
+  
+  .pelicula-item-img {
+    width: 50px;
+  }
