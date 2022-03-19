@@ -1,62 +1,63 @@
+import * as React from 'react';
 import { useEffect, useState } from "react";
-import ItemListadoPeliculas from "./ItemListadoPeliculas";
-import {
-  List,
-  ListItem, 
-  ListItemText,
-  ListItemIcon,
-  ListItemAvatar,
-  Avatar,
-  Divider
-} from "@mui/material"
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import ItemListadoPeliculas from "./ItemListadoPeliculas"
+import { colorPrimario} from "../Auxiliares/Auxiliares"
 
 const Listados = ({ titulo, url }) => {
   const [listaPeliculas, setListaPeliculas] = useState([]);
   useEffect(() => {
     fetch(
-      `https://api.themoviedb.org/3/movie/${url}?api_key=2502e04450297fe1820caf2543ff47df&language=es-AR$page=1`
+      `https://api.themoviedb.org/3/movie/${url}?api_key=96357f7f10ae428b53766292b46e8b8e&language=es-AR$page=1`
     )
       .then((res) => res.json())
       .then((data) => setListaPeliculas(data.results));
   }, []);
 
   return (
-    <div className="lista-peliculas">
-      <h2>{titulo}</h2>
-      
-      {listaPeliculas.map((pelicula) => (
-          <List>
-          <ListItem button>
-             <ListItemAvatar>
-                <Avatar
-                  alt={`Imagen de la Película`}
-                  src={`https://image.tmdb.org/t/p/w300/${pelicula.poster_path}`}
-                />
-              </ListItemAvatar>
-            <ListItemText>
-             {pelicula.title}
-            </ListItemText>
-            <ListItemIcon >
-              <ArrowForwardIosIcon></ArrowForwardIosIcon>
-            </ListItemIcon>
-            
-          </ListItem>
-          <Divider></Divider> 
-          </List>
+    <Box
+      sx={{
+      height: "450px",
+      overflow: "scroll",
+      borderBottom: `1px ${colorPrimario} solid`,
+    }}
+  >
 
-      ))}
-      
-      
-      {/* {listaPeliculas.map((pelicula) => (
-        <ItemListadoPeliculas
-          titulo={pelicula.title}
-          imagen={`https://image.tmdb.org/t/p/w300/${pelicula.poster_path}`}
-          link={`/${pelicula.id}`}
-        /> 
-      ))} */}
-    </div>
+  <Box
+    sx={{
+      bgcolor: colorPrimario,
+      height: 80,
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      borderRadius: 1,
+    }}
+    >
+   <Typography
+      sx={{
+       bgcolor: colorPrimario,  color:"white"
+      }}
+      variant="h3"
+      gutterBottom
+      component="div"
+   >
+    {titulo}  
+  </Typography> 
+  </Box>
+  {listaPeliculas.map((pelicula) => (
+  <ItemListadoPeliculas
+    key={pelicula.id}
+    titulo={pelicula.title}
+    imagen={`https://image.tmdb.org/t/p/w300/${pelicula.poster_path}`}
+    linkIcono={`/${pelicula.id}`}
+  /> 
+))}  
+
+</Box>  
+  
   );
+  
 };
 
 export default Listados;
