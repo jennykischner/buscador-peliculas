@@ -1,10 +1,51 @@
-const ItemListadoPeliculas = ({ titulo, imagen, link }) => {
+import * as React from 'react';
+import {
+  List,
+  ListItem, 
+  ListItemText,
+  ListItemIcon,
+  ListItemAvatar,
+  Avatar,
+  Divider, 
+  Box,
+  Link, 
+  IconButton
+} from "@mui/material"
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+
+
+const ItemListadoPeliculas = ({ titulo, imagen, linkIcono }) => {
   return (
-    <div className="pelicula-item">
-      <img className="pelicula-item-img" src={imagen} />
-      <p>{titulo}</p>
-      <a href={link}> {">"} </a>
-    </div>
+
+    <Box>
+       <List sx={{bgcolor:'background.paper', width: "350px"}}>
+          <ListItem alingItems="flex-start">
+             <ListItemAvatar>
+                <Avatar
+                  alt={`Imagen de la Película`}
+                  src={`https://image.tmdb.org/t/p/w300/${imagen}`}
+                />
+              </ListItemAvatar>
+            <ListItemText>
+            {titulo}
+            </ListItemText>
+            <Link to={linkIcono}>
+
+            </Link>
+            <IconButton> 
+            
+              <ArrowForwardIosIcon></ArrowForwardIosIcon>
+               
+            </IconButton>
+            
+          </ListItem>
+          <Divider variant="inset" component="li"></Divider> 
+          </List>
+
+
+
+    </Box>
+    
   );
 };
 
