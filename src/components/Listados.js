@@ -1,9 +1,9 @@
-import * as React from 'react';
+import * as React from "react";
 import { useEffect, useState } from "react";
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import ItemListadoPeliculas from "./ItemListadoPeliculas"
-import { colorPrimario} from "../Auxiliares/Auxiliares"
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import ItemListadoPeliculas from "./ItemListadoPeliculas";
+import { colorPrincipal } from "../Auxiliares/Auxiliares";
 
 const Listados = ({ titulo, url }) => {
   const [listaPeliculas, setListaPeliculas] = useState([]);
@@ -18,46 +18,42 @@ const Listados = ({ titulo, url }) => {
   return (
     <Box
       sx={{
-      height: "450px",
-      overflow: "scroll",
-      borderBottom: `1px ${colorPrimario} solid`,
-    }}
-  >
-
-  <Box
-    sx={{
-      bgcolor: colorPrimario,
-      height: 80,
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      borderRadius: 1,
-    }}
-    >
-   <Typography
-      sx={{
-       bgcolor: colorPrimario,  color:"white"
+        height: "450px",
+        overflow: "scroll",
+        borderBottom: `1px ${colorPrincipal} solid`,
       }}
-      variant="h3"
-      gutterBottom
-      component="div"
-   >
-    {titulo}  
-  </Typography> 
-  </Box>
-  {listaPeliculas.map((pelicula) => (
-  <ItemListadoPeliculas
-    key={pelicula.id}
-    titulo={pelicula.title}
-    imagen={`https://image.tmdb.org/t/p/w300/${pelicula.poster_path}`}
-    linkIcono={`/${pelicula.id}`}
-  /> 
-))}  
-
-</Box>  
-  
+    >
+      <Box
+        sx={{
+          bgcolor: colorPrincipal,
+          height: 80,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          borderRadius: 1,
+        }}
+      >
+        <Typography
+          sx={{
+            bgcolor: colorPrincipal,
+            color: "white",
+          }}
+          variant="h3"
+          gutterBottom
+          component="div"
+        >
+          {titulo}
+        </Typography>
+      </Box>
+      {listaPeliculas.map((pelicula) => (
+        <ItemListadoPeliculas
+          titulo={pelicula.title}
+          imagen={`https://image.tmdb.org/t/p/w300/${pelicula.poster_path}`}
+          linkIcono={`/${pelicula.id}`}
+        />
+      ))}
+    </Box>
   );
-  
 };
 
 export default Listados;
