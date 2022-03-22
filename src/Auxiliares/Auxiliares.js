@@ -1,2 +1,7 @@
+export const colorPrincipal = "#5556"
 
-export const colorPrincipal = "#5555";
+
+
+
+
+

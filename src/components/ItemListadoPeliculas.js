@@ -17,7 +17,7 @@ const ItemListadoPeliculas = ({ titulo, imagen, linkIcono }) => {
   return (
 
     <Box>
-       <List sx={{bgcolor:'background.paper', width: "350px"}}>
+       <List sx={{bgcolor:'background.paper', width: "650px"}}>
           <ListItem alingItems="flex-start">
              <ListItemAvatar>
                 <Avatar

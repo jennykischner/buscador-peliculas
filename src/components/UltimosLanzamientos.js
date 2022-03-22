@@ -1,8 +1,8 @@
 import Tarjeta from "./Tarjeta";
-import useFetchPeliculas from "../hooks/useFetchPeliculas";
+import useFetchPeliculas from "../hook/useFetchPeliculas";
 
 const UltimosLanzamientos = () => {
-  const peliculas = useFetchPeliculas("upcoming");
+  const peliculas = useFetchPeliculas("now_playing");
   return (
     <div>
       <h2>Soy ultimos Lanzamientos</h2>

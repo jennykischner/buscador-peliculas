@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import ItemListadoPeliculas from "./ItemListadoPeliculas";
-import { colorPrincipal } from "../Auxiliares/Auxiliares";
+
+
 
 const Listados = ({ titulo, url }) => {
   const [listaPeliculas, setListaPeliculas] = useState([]);
@@ -16,16 +17,18 @@ const Listados = ({ titulo, url }) => {
   }, []);
 
   return (
+    
     <Box
       sx={{
         height: "450px",
         overflow: "scroll",
-        borderBottom: `1px ${colorPrincipal} solid`,
+        borderBottom: `1px '#1565c0' solid`,
+      
       }}
     >
       <Box
         sx={{
-          bgcolor: colorPrincipal,
+          bgcolor: '#1565c0',
           height: 80,
           display: "flex",
           alignItems: "center",
@@ -33,18 +36,20 @@ const Listados = ({ titulo, url }) => {
           borderRadius: 1,
         }}
       >
+        
         <Typography
           sx={{
-            bgcolor: colorPrincipal,
+            bgcolor: '#1565c0',
             color: "white",
           }}
-          variant="h3"
+          variant="h5"
           gutterBottom
           component="div"
         >
           {titulo}
         </Typography>
       </Box>
+      
       {listaPeliculas.map((pelicula) => (
         <ItemListadoPeliculas
           titulo={pelicula.title}
