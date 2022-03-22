@@ -1,5 +1,5 @@
 import Tarjeta from "./Tarjeta";
-import useFetchPeliculas from "../hooks/useFetchPeliculas"
+import useFetchPeliculas from "../hook/useFetchPeliculas"
 
 const Populares = () =>{
     const peliculas = useFetchPeliculas("popular");
