@@ -1,16 +1,27 @@
 import Tarjeta from "./Tarjeta";
 import useFetchPeliculas from "../hook/useFetchPeliculas";
+import { Box } from "@mui/material";
 
 const UltimosLanzamientos = () => {
   const peliculas = useFetchPeliculas("now_playing");
   return (
-    <div>
-      <h2>Soy ultimos Lanzamientos</h2>
+    <Box
+      sx={{
+        marginTop: 5,
+        display: "flex",
+        flexWrap: "wrap",
+        justifyContent: "center",
+      }}
+    >
       {peliculas.map((pelicula) => (
-        <h3 key={pelicula.id}>{pelicula.title}</h3>
+        <Tarjeta
+          key={pelicula.id}
+          titulo={pelicula.title}
+          imagen={`https://image.tmdb.org/t/p/w300/${pelicula.poster_path}`}
+          linkTarjeta={`/detalle-pelicula/${pelicula.id}`}
+        />
       ))}
-      <Tarjeta />
-    </div>
+    </Box>
   );
 };
 
