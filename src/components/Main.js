@@ -9,7 +9,7 @@ const Main = () => {
       <Carrusel />
       <Box sx={{ display: "flex", justifyContent: "space-around", padding: 5 }}>
       <Listados titulo="Peliculas Populares" url="popular" />
-      <Listados titulo="Peliculas Mejor Puntadas" url="top_rated" />
+      <Listados titulo="Peliculas Mejor Puntadas" url="now_playing" />
     </Box>
     </Box>
   );

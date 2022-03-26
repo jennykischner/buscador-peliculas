@@ -17,7 +17,6 @@ const App = () => {
         <Route path="/ultimos-lanzamientos" element={<UltimosLanzamientos />} />
         <Route path="/populares" element={<Populares />} />
         <Route path="/buscar" element={<Buscar />} />
-
         <Route path="/detalle-pelicula/:idPelicula" element={<Buscar />} />
       </Routes>
 
