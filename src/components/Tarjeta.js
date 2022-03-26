@@ -43,7 +43,7 @@ const Tarjeta = ({ titulo, imagen, linkTarjeta }) => {
       </CardContent>
       <CardActions sx={{ justifyContent: "center" }}>
         <Link to={linkTarjeta}>
-          <IconButton style={{ color: "#1565c0" }}>
+          <IconButton style={{ color: "#424242" }}>
             <RemoveRedEyeIcon></RemoveRedEyeIcon>
           </IconButton>
         </Link>

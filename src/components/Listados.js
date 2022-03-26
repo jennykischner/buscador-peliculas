@@ -22,13 +22,13 @@ const Listados = ({ titulo, url }) => {
       sx={{
         height: "450px",
         overflow: "scroll",
-        borderBottom: `1px '#1565c0' solid`,
+        borderBottom: `1px "#424242" solid`,
       
       }}
     >
       <Box
         sx={{
-          bgcolor: '#1565c0',
+          bgcolor: "#424242",
           height: 80,
           display: "flex",
           alignItems: "center",
@@ -39,7 +39,7 @@ const Listados = ({ titulo, url }) => {
         
         <Typography
           sx={{
-            bgcolor: '#1565c0',
+            bgcolor: "#424242",
             color: "white",
           }}
           variant="h5"
