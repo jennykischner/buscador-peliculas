@@ -7,13 +7,12 @@ import {
   Avatar,
   Divider, 
   Box,
-  Link, 
-  IconButton
+  IconButton, 
 } from "@mui/material"
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import {Link} from "react-router-dom";
 
-
-const ItemListadoPeliculas = ({ titulo, imagen, linkIcono }) => {
+const ItemListadoPeliculas = ({ titulo, imagen, id }) => {
   return (
 
     <Box>
@@ -28,15 +27,14 @@ const ItemListadoPeliculas = ({ titulo, imagen, linkIcono }) => {
             <ListItemText>
             {titulo}
             </ListItemText>
-            <Link to={linkIcono}>
-
-            </Link>
+            
+            <Link to={`/detalle-pelicula/${id}`}>
             <IconButton> 
             
               <ArrowForwardIosIcon></ArrowForwardIosIcon>
                
             </IconButton>
-            
+            </Link>
           </ListItem>
           <Divider variant="inset" component="li"></Divider> 
           </List>

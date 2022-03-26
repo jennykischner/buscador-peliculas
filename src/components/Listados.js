@@ -5,8 +5,7 @@ import Typography from "@mui/material/Typography";
 import ItemListadoPeliculas from "./ItemListadoPeliculas";
 
 
-
-const Listados = ({ titulo, url }) => {
+const Listados = ({ titulo, url, Link}) => {
   const [listaPeliculas, setListaPeliculas] = useState([]);
   useEffect(() => {
     fetch(
@@ -36,7 +35,7 @@ const Listados = ({ titulo, url }) => {
           borderRadius: 1,
         }}
       >
-        
+     
         <Typography
           sx={{
             bgcolor: "#424242",
@@ -48,6 +47,7 @@ const Listados = ({ titulo, url }) => {
         >
           {titulo}
         </Typography>
+        
       </Box>
       
       {listaPeliculas.map((pelicula) => (
@@ -55,6 +55,8 @@ const Listados = ({ titulo, url }) => {
           titulo={pelicula.title}
           imagen={`https://image.tmdb.org/t/p/w300/${pelicula.poster_path}`}
           linkIcono={`/${pelicula.id}`}
+          id={pelicula.id}
+
         />
       ))}
     </Box>
