@@ -1,7 +1,5 @@
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Slider from "react-slick";
@@ -19,7 +17,7 @@ const Carrusel = () => {
         arrows={true}
         slidesToShow={1}
         autoplay={true}
-        autoplaySpeed={2500}
+        autoplaySpeed={3500}
       >
         {peliculas.map((pelicula) => (
           <Box
@@ -43,31 +41,35 @@ const Carrusel = () => {
                 px: 40,
                 py: 40,
                 textAlign: "center",
-                opacity: [0.9, 0.9, 0.8],  
+                opacity: [0.5, 0.5, 0.5],  
+                bgcolor: "transparent",
               }}
             >
-              <Card>
-                <CardContent>
-                  <Typography variant="h5" component="div">
-                    {pelicula.title}
-                  </Typography>
-                  <Typography
-                    sx={{ fontSize: 14 }}
-                    color="text.secondary"
-                    gutterBottom
+              <Card sx={{ color: "text.primary" }}>
+                <Typography variant="h5" component="div">
+                  {pelicula.title}
+                </Typography>
+                <Typography
+                  variant="h5"
+                  sx={{ fontSize: 16 }}
+                  color="text.secondary"
+                  gutterBottom
+                >
+                  {pelicula.overview}
+                </Typography>
+
+                <Link to={`/detalle-pelicula/${pelicula.id}`}>
+                  <Button
+                    sx={{
+                      bgcolor: "#424242",
+                      ":hover": { bgcolor: "#424242" },
+                    }}
+                    size="small"
+                    variant="contained"
                   >
-                    {pelicula.overview}
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Link to={`/detalle-pelicula/${pelicula.id}`}>
-                    <Button 
-                    sx={{bgcolor:"#424242"}}
-                    size="small" variant="contained">
-                      Ver mas...
-                    </Button>
-                  </Link>
-                </CardActions>
+                    Ver mas...
+                  </Button>
+                </Link>
               </Card>
             </Box>
           </Box>
