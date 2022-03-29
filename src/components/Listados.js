@@ -19,10 +19,8 @@ const Listados = ({ titulo, url, Link}) => {
     
     <Box
       sx={{
-        height: "450px",
-        overflow: "scroll",
-        borderBottom: `1px "#424242" solid`,
-      
+        height: "550px",
+        borderBottom: `1px "#424242" solid`,   
       }}
     >
       <Box
@@ -33,6 +31,7 @@ const Listados = ({ titulo, url, Link}) => {
           alignItems: "center",
           justifyContent: "center",
           borderRadius: 1,
+ 
         }}
       >
      
@@ -44,21 +43,26 @@ const Listados = ({ titulo, url, Link}) => {
           variant="h5"
           gutterBottom
           component="div"
+          
         >
           {titulo}
         </Typography>
         
       </Box>
       
+      <Box sx={{overflow: "scroll", 
+      height: "50vh" }}>
       {listaPeliculas.map((pelicula) => (
-        <ItemListadoPeliculas
+        <ItemListadoPeliculas 
           titulo={pelicula.title}
           imagen={`https://image.tmdb.org/t/p/w300/${pelicula.poster_path}`}
           linkIcono={`/${pelicula.id}`}
           id={pelicula.id}
 
         />
+       
       ))}
+       </Box>
     </Box>
   );
 };

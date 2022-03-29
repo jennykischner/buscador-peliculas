@@ -15,7 +15,7 @@ import {Link} from "react-router-dom";
 const ItemListadoPeliculas = ({ titulo, imagen, id }) => {
   return (
 
-    <Box>
+    <Box >
        <List sx={{bgcolor:'background.paper', width: "650px"}}>
           <ListItem alingItems="flex-start">
              <ListItemAvatar>

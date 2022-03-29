@@ -13,7 +13,7 @@ const DetallePelicula = () => {
 
   useEffect(() => {
     fetch(
-      `https://api.themoviedb.org/3/movie/${params.idPelicula}?api_key=96357f7f10ae428b53766292b46e8b8e&language=es-AR$page=1`
+      `https://api.themoviedb.org/3/movie/${params.idPelicula}?api_key=96357f7f10ae428b53766292b46e8b8e&language=es-ES`
     )
       .then((res) => res.json())
       .then((data) => {
@@ -61,7 +61,13 @@ const DetallePelicula = () => {
               </Typography>
               <Typography
                 variant="h5"
-                sx={{ color: "#424242", fontWeight: 600, pl: 2 }}
+                sx={{
+                  color: "#424242",
+                  fontWeight: 400,
+                  pl: 2,
+                  fontSize: 16,
+                  fontFamily: "Montserrat, Caladea",
+                }}
               >
                 {peliculaDetalle.release_date &&
                   peliculaDetalle.release_date.slice(0, 4)}
@@ -70,7 +76,13 @@ const DetallePelicula = () => {
             <Typography
               variant="subtitle1"
               color="white"
-              sx={{ pt: 3, textAlign: "justify", fontWeight: 600 }}
+              sx={{
+                pt: 3,
+                textAlign: "justify",
+                fontWeight: 400,
+                fontSize: 20,
+                fontFamily: "Montserrat",
+              }}
             >
               {peliculaDetalle.overview}
             </Typography>
@@ -79,7 +91,13 @@ const DetallePelicula = () => {
                 <Typography
                   variant="subtitle1"
                   color="white"
-                  sx={{ pt: 3, textAlign: "justify", fontWeight: 600 }}
+                  sx={{
+                    pt: 3,
+                    textAlign: "justify",
+                    fontWeight: 300,
+                    fontSize: 16,
+                    fontFamily: "Zilla Slab",
+                  }}
                 >
                   {genre.name}
                 </Typography>
