@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 
 const Carrusel = () => {
   const peliculas = useFetchPeliculas("now_playing");
+
   return (
     <Box>
       <Slider
@@ -33,15 +34,16 @@ const Carrusel = () => {
           >
             <Box
               sx={{
-                maxWidth: 950,
+                width: "50%",
+                heigth: "500px",
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
                 alignItems: "center",
-                px: 40,
+                px: 50,
                 py: 40,
                 textAlign: "center",
-                opacity: [0.5, 0.5, 0.5],  
+                opacity: [0.5, 0.5, 0.5],
                 bgcolor: "transparent",
               }}
             >
@@ -50,8 +52,12 @@ const Carrusel = () => {
                   {pelicula.title}
                 </Typography>
                 <Typography
-                  variant="h5"
-                  sx={{ fontSize: 16 }}
+                  variant="h6"
+                  sx={{
+                    fontSize: 16,
+                    fontFamily: "Montserrat, Caladea",
+                    fontWeight: "500",
+                  }}
                   color="text.secondary"
                   gutterBottom
                 >
@@ -63,6 +69,8 @@ const Carrusel = () => {
                     sx={{
                       bgcolor: "#424242",
                       ":hover": { bgcolor: "#424242" },
+                      borderColor: "#424242",
+                      display: "inline-block",
                     }}
                     size="small"
                     variant="contained"

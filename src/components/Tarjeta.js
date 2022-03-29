@@ -28,7 +28,7 @@ const Tarjeta = ({ titulo, imagen, linkTarjeta }) => {
       <CardContent>
         <Typography
           gutterBottom
-          variant="h6"
+          variant="h8"
           component="div"
           sx={{
             width: 350,
@@ -36,6 +36,7 @@ const Tarjeta = ({ titulo, imagen, linkTarjeta }) => {
             textOverFlow: "ellipsis",
             overflow: "hidden",
             textAling: "center",
+            fontFamily: "Zilla Slab"
           }}
         >
           {titulo}
