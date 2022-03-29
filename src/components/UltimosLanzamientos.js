@@ -1,7 +1,9 @@
 import Tarjeta from "./Tarjeta";
+import Paginado from "./Paginado";
 import useFetchPeliculas from "../hook/useFetchPeliculas";
 import { Box } from "@mui/material";
 import Typography from "@mui/material/Typography";
+
 
 const UltimosLanzamientos = () => {
   const peliculas = useFetchPeliculas("now_playing");
@@ -41,6 +43,15 @@ const UltimosLanzamientos = () => {
           />
         ))}
       </Box>
+      <Paginado
+        sx={{
+          cursor: "pointer",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          width: 100
+        }}
+      ></Paginado>
     </Box>
   );
 };

@@ -1,4 +1,5 @@
 import Tarjeta from "./Tarjeta";
+import Paginado from "./Paginado";
 import useFetchPeliculas from "../hook/useFetchPeliculas";
 import { Box } from "@mui/material";
 import Typography from "@mui/material/Typography";
@@ -42,6 +43,16 @@ const Populares = () => {
           />
         ))}
       </Box>
+
+      <Paginado
+        sx={{
+          cursor: "pointer",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          width: 100
+        }}
+      ></Paginado>
     </Box>
   );
 };
