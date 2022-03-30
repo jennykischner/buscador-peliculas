@@ -15,7 +15,9 @@ const Buscar = () => {
   });
   useEffect(() => {
     fetch(
-      `https://api.themoviedb.org/3/search/movie?api_key=c7e318bc4679faa16a6f940e1435e019&languaje=en-EN&query=${searchParams.get("query")}&page=1`
+      `https://api.themoviedb.org/3/search/movie?api_key=c7e318bc4679faa16a6f940e1435e019&languaje=en-EN&query=${searchParams.get(
+        "query"
+      )}&page=1`
     )
       .then((res) => res.json())
       .then((data) => setPeliculas(data.results));
@@ -32,47 +34,53 @@ const Buscar = () => {
   };
 
   return (
-   
     <Box sx={{ marginTop: 15 }}>
-      <TextField
-        sx={{ width: 400 }}
-        id="standard-basic"
-        label="Buscar Peliculas"
-        variant="standard"
-        onChange={handleChange}
-        value={valorDelInput}
-      ></TextField>
-
-      <Button
-        margin="normal"
-        variant="outline"
-        endIcon={<SearchIcon></SearchIcon>}
-        onClick={handleClick}
+      <Box
+        sx={{
+          marginTop: 15,
+          display: "flex",
+          justifyContent: "center",
+        }}
       >
-        Buscar
-      </Button>
-      
-      <Box sx={{
-        marginTop: 10,
-        display: "flex",
-        flexWrap: "wrap",
-        justifyContent: "center",
-      }}>
-      {peliculas &&
-        peliculas.map(pelicula => {
-          return (
-            <Tarjeta 
-              titulo={pelicula.title}
-              imagen={`https://image.tmdb.org/t/p/w300/${pelicula.poster_path}`}
-              linkTarjeta={`/detalle-pelicula/${pelicula.id}`}
-            />
-          );
-        })}
-          </Box>
+        <TextField
+          sx={{ width: 400 }}
+          id="standard-basic"
+          label="Buscar Peliculas"
+          variant="standard"
+          onChange={handleChange}
+          value={valorDelInput}
+        ></TextField>
+
+        <Button
+          margin="normal"
+          variant="outline"
+          endIcon={<SearchIcon></SearchIcon>}
+          onClick={handleClick}
+        >
+          Buscar
+        </Button>
+      </Box>
+      <Box
+        sx={{
+          marginTop: 10,
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "center",
+        }}
+      >
+        {peliculas &&
+          peliculas.map((pelicula) => {
+            return (
+              <Tarjeta
+                titulo={pelicula.title}
+                imagen={`https://image.tmdb.org/t/p/w300/${pelicula.poster_path}`}
+                linkTarjeta={`/detalle-pelicula/${pelicula.id}`}
+              />
+            );
+          })}
+      </Box>
     </Box>
-  
   );
- 
 };
 
 export default Buscar;
