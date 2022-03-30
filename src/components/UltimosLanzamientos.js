@@ -3,10 +3,29 @@ import Paginado from "./Paginado";
 import useFetchPeliculas from "../hook/useFetchPeliculas";
 import { Box } from "@mui/material";
 import Typography from "@mui/material/Typography";
+import {useState} from "react"
 
 
 const UltimosLanzamientos = () => {
-  const peliculas = useFetchPeliculas("now_playing");
+  const [page, setPage] = useState (1)
+  const {peliculas, totalPages} = useFetchPeliculas("now_playing", page);
+  
+  const handleClickFirstPage = () => {
+    setPage(1)
+  }
+
+  const handleClickNext = () =>{
+    setPage( page + 1)
+  }
+
+  const handleClickPrev = () =>{
+    setPage( page - 1)
+  }
+
+  const handleClickUltimaPagina = (totalPages) => {
+    setPage(totalPages)
+  }
+
   return (
     <Box
       sx={{
@@ -44,6 +63,7 @@ const UltimosLanzamientos = () => {
         ))}
       </Box>
       <Paginado
+      
         sx={{
           cursor: "pointer",
           display: "flex",
@@ -51,6 +71,13 @@ const UltimosLanzamientos = () => {
           justifyContent: "center",
           width: 100
         }}
+        handleClickNext={handleClickNext}
+        handleClickPrev={handleClickPrev}
+        handleClickFirstPage= {handleClickFirstPage}
+        handleClickUltimaPagina= {() => handleClickUltimaPagina(totalPages> 500 ? 500 : totalPages)}
+
+        page={page}
+
       ></Paginado>
     </Box>
   );

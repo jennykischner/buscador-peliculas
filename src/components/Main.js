@@ -4,7 +4,7 @@ import Listados from "./Listados";
 
 const Main = () => {
   return (
-    <Box  >
+    <Box >
       
       <Carrusel />
 
