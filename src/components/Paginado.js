@@ -52,7 +52,7 @@ const Paginado = ({
       <IconButton
         aria-label="ir a ultima pagina"
         onClick={() => handleClickUltimaPagina(totalPages> 500 ? 500 : totalPages)}
-        disabled={totalPages > 500 ? page === 500 : page === totalPages}
+     
       >
         <SkipNextIcon />
       </IconButton>

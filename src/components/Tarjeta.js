@@ -15,8 +15,10 @@ const Tarjeta = ({ titulo, imagen, linkTarjeta }) => {
         width: 250,
         heigth: 370,
         m: 2,
+        mb:4,
         display: "flex",
-        flexDirection: "column;",
+        flexDirection: "column",
+        alignItems: "center",
       }}
     >
       <CardMedia
@@ -31,12 +33,13 @@ const Tarjeta = ({ titulo, imagen, linkTarjeta }) => {
           variant="h8"
           component="div"
           sx={{
-            width: 350,
+            width: 200,
             whiteSpace: "nowrap",
             textOverFlow: "ellipsis",
             overflow: "hidden",
             textAling: "center",
-            fontFamily: "Zilla Slab"
+            fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+            fontWeight: 600,
           }}
         >
           {titulo}

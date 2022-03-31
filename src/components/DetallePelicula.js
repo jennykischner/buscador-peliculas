@@ -6,6 +6,7 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 
+
 const DetallePelicula = () => {
   const params = useParams();
 
@@ -27,7 +28,7 @@ const DetallePelicula = () => {
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://image.tmdb.org/t/p/original/${peliculaDetalle.backdrop_path})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
-        height: "90vh",
+        height: "120vh",
         display: "flex",
       }}
     >
@@ -62,11 +63,12 @@ const DetallePelicula = () => {
               <Typography
                 variant="h5"
                 sx={{
-                  color: "#424242",
-                  fontWeight: 400,
+                  color: "white",
+                  fontWeight: 500,
                   pl: 2,
-                  fontSize: 16,
-                  fontFamily: "Montserrat, Caladea",
+                  fontSize: 20,
+                  fontFamily:
+                    "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';",
                 }}
               >
                 {peliculaDetalle.release_date &&
@@ -81,11 +83,28 @@ const DetallePelicula = () => {
                 textAlign: "justify",
                 fontWeight: 400,
                 fontSize: 20,
-                fontFamily: "Montserrat",
+                fontFamily:
+                  "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';",
               }}
             >
               {peliculaDetalle.overview}
             </Typography>
+
+            <Typography
+              variant="subtitle1"
+              color="white"
+              sx={{
+                pt: 3,
+                textAlign: "justify",
+                fontWeight: 400,
+                fontSize: 20,
+                fontFamily:
+                  "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';",
+              }}
+            >
+              Géneros:
+            </Typography>
+
             {peliculaDetalle.genres &&
               peliculaDetalle.genres.map((genre) => (
                 <Typography
@@ -96,10 +115,13 @@ const DetallePelicula = () => {
                     textAlign: "justify",
                     fontWeight: 300,
                     fontSize: 16,
-                    fontFamily: "Zilla Slab",
+                    fontFamily:
+                      "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';",
                   }}
                 >
+                
                   {genre.name}
+                 
                 </Typography>
               ))}
           </CardContent>

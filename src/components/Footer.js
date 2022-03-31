@@ -14,6 +14,9 @@ const Footer = () => {
         textAlign: "center",
         bgcolor: "#424242",
         height: 80,
+        position: "absolute",
+        bottom: 0,
+        width: "100%"
       }}
     >
       <Typography
