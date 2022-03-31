@@ -3,28 +3,27 @@ import Paginado from "./Paginado";
 import useFetchPeliculas from "../hook/useFetchPeliculas";
 import { Box } from "@mui/material";
 import Typography from "@mui/material/Typography";
-import {useState} from "react"
-
+import { useState } from "react";
 
 const UltimosLanzamientos = () => {
-  const [page, setPage] = useState (1)
-  const {peliculas, totalPages} = useFetchPeliculas("now_playing", page);
-  
+  const [page, setPage] = useState(1);
+  const { peliculas, totalPages } = useFetchPeliculas("now_playing", page);
+
   const handleClickFirstPage = () => {
-    setPage(1)
-  }
+    setPage(1);
+  };
 
-  const handleClickNext = () =>{
-    setPage( page + 1)
-  }
+  const handleClickNext = () => {
+    setPage(page + 1);
+  };
 
-  const handleClickPrev = () =>{
-    setPage( page - 1)
-  }
+  const handleClickPrev = () => {
+    setPage(page - 1);
+  };
 
   const handleClickUltimaPagina = (totalPages) => {
-    setPage(totalPages)
-  }
+    setPage(totalPages);
+  };
 
   return (
     <Box
@@ -63,21 +62,21 @@ const UltimosLanzamientos = () => {
         ))}
       </Box>
       <Paginado
-      
         sx={{
           cursor: "pointer",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          width: 100
+          width: 100,
         }}
         handleClickNext={handleClickNext}
         handleClickPrev={handleClickPrev}
-        handleClickFirstPage= {handleClickFirstPage}
-        handleClickUltimaPagina= {() => handleClickUltimaPagina(totalPages> 500 ? 500 : totalPages)}
-
         page={page}
-
+        handleClickFirstPage={handleClickFirstPage}
+        handleClickUltimaPagina={() =>
+          handleClickUltimaPagina(totalPages > 500 ? 500 : totalPages)
+        }
+        totalPages={totalPages}
       ></Paginado>
     </Box>
   );

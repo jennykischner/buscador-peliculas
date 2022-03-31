@@ -41,21 +41,22 @@ const Carrusel = () => {
                 justifyContent: "center",
                 alignItems: "center",
                 px: 50,
-                py: 40,
+                py: 50,
                 textAlign: "center",
                 opacity: [0.5, 0.5, 0.5],
                 bgcolor: "transparent",
               }}
             >
               <Card sx={{ color: "text.primary" }}>
-                <Typography variant="h5" component="div">
+                <Typography sx={{fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';"}}
+                variant="h5" component="div">
                   {pelicula.title}
                 </Typography>
                 <Typography
                   variant="h6"
                   sx={{
                     fontSize: 16,
-                    fontFamily: "Montserrat, Caladea",
+                    fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';",
                     fontWeight: "500",
                   }}
                   color="text.secondary"

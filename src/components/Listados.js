@@ -4,8 +4,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import ItemListadoPeliculas from "./ItemListadoPeliculas";
 
-
-const Listados = ({ titulo, url, Link}) => {
+const Listados = ({ titulo, url, Link }) => {
   const [listaPeliculas, setListaPeliculas] = useState([]);
   useEffect(() => {
     fetch(
@@ -16,11 +15,10 @@ const Listados = ({ titulo, url, Link}) => {
   }, []);
 
   return (
-    
     <Box
       sx={{
         height: "550px",
-        borderBottom: `1px "#424242" solid`,   
+        borderBottom: `1px "#424242" solid`,
       }}
     >
       <Box
@@ -31,10 +29,8 @@ const Listados = ({ titulo, url, Link}) => {
           alignItems: "center",
           justifyContent: "center",
           borderRadius: 1,
- 
         }}
       >
-     
         <Typography
           sx={{
             bgcolor: "#424242",
@@ -43,26 +39,23 @@ const Listados = ({ titulo, url, Link}) => {
           variant="h5"
           gutterBottom
           component="div"
-          
         >
           {titulo}
         </Typography>
-        
       </Box>
-      
-      <Box sx={{overflow: "scroll", 
-      height: "50vh" }}>
-      {listaPeliculas.map((pelicula) => (
-        <ItemListadoPeliculas 
-          titulo={pelicula.title}
-          imagen={`https://image.tmdb.org/t/p/w300/${pelicula.poster_path}`}
-          linkIcono={`/${pelicula.id}`}
-          id={pelicula.id}
 
-        />
-       
-      ))}
-       </Box>
+      <Box sx={{ 
+        overflow: "scroll", 
+        height: "50vh" }}>
+        {listaPeliculas.map((pelicula) => (
+          <ItemListadoPeliculas
+            titulo={pelicula.title}
+            imagen={`https://image.tmdb.org/t/p/w300/${pelicula.poster_path}`}
+            linkIcono={`/${pelicula.id}`}
+            id={pelicula.id}
+          />
+        ))}
+      </Box>
     </Box>
   );
 };
