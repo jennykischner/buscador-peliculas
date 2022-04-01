@@ -45,7 +45,7 @@ const Listados = ({ titulo, url, Link }) => {
       </Box>
 
       <Box sx={{ 
-        overflow: "scroll", 
+        overflowY: "scroll", 
         height: "50vh" }}>
         {listaPeliculas.map((pelicula) => (
           <ItemListadoPeliculas
