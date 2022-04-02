@@ -6,7 +6,6 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 
-
 const DetallePelicula = () => {
   const params = useParams();
 
@@ -46,16 +45,30 @@ const DetallePelicula = () => {
           <Box>
             <CardMedia
               component="img"
-              sx={{ width: "300px", height: "400px" }}
+              sx={{
+                width: "300px",
+                height: "400px",
+                display: {
+                  xs: "none",
+                  sm: "none",
+                  md: "inline",
+                },
+              }}
               image={`https://image.tmdb.org/t/p/original/${peliculaDetalle.poster_path}`}
             ></CardMedia>
           </Box>
-          <CardContent sx={{ ml: 6 }}>
+          <CardContent>
             <Box sx={{ display: "flex", alignItems: "flex-end" }}>
               <Typography
-                variant="h4"
                 color="white"
-                sx={{ lineHeight: "initial" }}
+                sx={{
+                  lineHeight: "initial",
+                  fontSize: {
+                    xs: "20px",
+                    sm: "40px",
+                    md: "40px",
+                  },
+                }}
               >
                 {peliculaDetalle.title}
                 {""}
@@ -66,7 +79,12 @@ const DetallePelicula = () => {
                   color: "white",
                   fontWeight: 500,
                   pl: 2,
-                  fontSize: 20,
+                  fontSize: {
+                    xs: "20px",
+                    sm: "30px",
+                    md: "30px",
+                  },
+
                   fontFamily:
                     "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';",
                 }}
@@ -82,7 +100,12 @@ const DetallePelicula = () => {
                 pt: 3,
                 textAlign: "justify",
                 fontWeight: 400,
-                fontSize: 20,
+                fontSize: {
+                  xs: "15px",
+                  sm: "20px",
+                  md: "20px",
+                },
+
                 fontFamily:
                   "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';",
               }}
@@ -97,7 +120,12 @@ const DetallePelicula = () => {
                 pt: 3,
                 textAlign: "justify",
                 fontWeight: 400,
-                fontSize: 20,
+                fontSize: {
+                  xs: "20px",
+                  sm: "15px",
+                  md: "25px",
+                },
+
                 fontFamily:
                   "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';",
               }}
@@ -114,14 +142,16 @@ const DetallePelicula = () => {
                     pt: 3,
                     textAlign: "justify",
                     fontWeight: 300,
-                    fontSize: 16,
+                    fontSize: {
+                      xs: "15px",
+                      sm: "20px",
+                      md: "20px",
+                    },
                     fontFamily:
                       "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';",
                   }}
                 >
-                
                   {genre.name}
-                 
                 </Typography>
               ))}
           </CardContent>
