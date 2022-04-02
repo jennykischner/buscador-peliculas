@@ -15,38 +15,42 @@ const Listados = ({ titulo, url, Link }) => {
   }, []);
 
   return (
-    <Box
-      sx={{
-        height: "550px",
-        borderBottom: `1px "#424242" solid`,
-      }}
-    >
+    <Box sx={{m: 2}}>
       <Box
         sx={{
           bgcolor: "#424242",
           height: 80,
           display: "flex",
+          flexWrap: "wrap",
           alignItems: "center",
           justifyContent: "center",
           borderRadius: 1,
+
         }}
       >
         <Typography
           sx={{
             bgcolor: "#424242",
             color: "white",
+            fontSize: {
+              xs: "18px",
+              sm: "20px",
+            },
           }}
           variant="h5"
-          gutterBottom
+        
           component="div"
         >
           {titulo}
         </Typography>
       </Box>
 
-      <Box sx={{ 
-        overflowY: "scroll", 
-        height: "50vh" }}>
+      <Box
+        sx={{
+          overflowY: "scroll",
+          height: "50vh",
+        }}
+      >
         {listaPeliculas.map((pelicula) => (
           <ItemListadoPeliculas
             titulo={pelicula.title}
