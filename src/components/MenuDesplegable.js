@@ -4,6 +4,7 @@ import MenuItem from '@mui/material/MenuItem';
 import { IconButton } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import Box from "@mui/material/Box";
+import { Link } from "react-router-dom";
 
 const MenuDesplegable =() =>{
         const [anchorEl, setAnchorEl] = React.useState(null);
@@ -35,9 +36,9 @@ const MenuDesplegable =() =>{
                 'aria-labelledby': 'basic-button',
               }}
             >
-              <MenuItem onClick={handleClose}>Profile</MenuItem>
-              <MenuItem onClick={handleClose}>My account</MenuItem>
-              <MenuItem onClick={handleClose}>Logout</MenuItem>
+              <MenuItem onClick={handleClose}> <Link to="/ultimos-lanzamientos"></Link>Últimos Lanzamientos</MenuItem>
+              <MenuItem onClick={handleClose}> <Link to="/populares"></Link> Populares</MenuItem>
+              <MenuItem onClick={handleClose}> <Link to="/buscar"></Link>Buscar</MenuItem>
             </Menu>
           </Box>
         );
