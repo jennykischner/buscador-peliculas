@@ -21,7 +21,7 @@ const ItemListadoPeliculas = ({ titulo, imagen, id }) => {
           sm: "80%",
           md: "100%",
         },
-        m: 1,
+        
       }}
     >
       <List
@@ -32,6 +32,7 @@ const ItemListadoPeliculas = ({ titulo, imagen, id }) => {
             sm: "400px",
             md: "450px",
           }
+
         }}
       >
         <ListItem alingItems="flex-start">
