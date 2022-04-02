@@ -32,6 +32,7 @@ const UltimosLanzamientos = () => {
         display: "flex",
         flexWrap: "wrap",
         justifyContent: "center",
+        alignItems: "center"
       }}
     >
       <Typography
@@ -48,8 +49,13 @@ const UltimosLanzamientos = () => {
 
       <Box
         sx={{
-          display: "flex",
-          flexWrap: "wrap",
+            display: "flex",
+            marginTop: 10,
+            alignItems: "center",
+            justifyContent: "center",
+            borderRadius: 1,
+            textAlign: "center",
+            flexWrap: "wrap"
         }}
       >
         {peliculas.map((pelicula) => (

@@ -49,7 +49,12 @@ const Populares = () => {
       <Box
         sx={{
           display: "flex",
-          flexWrap: "wrap",
+            marginTop: 10,
+            alignItems: "center",
+            justifyContent: "center",
+            borderRadius: 1,
+            textAlign: "center",
+            flexWrap: "wrap"
         }}
       >
         {peliculas.map((pelicula) => (

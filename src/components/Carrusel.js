@@ -9,7 +9,7 @@ import useFetchPeliculas from "../hook/useFetchPeliculas";
 import { Link } from "react-router-dom";
 
 const Carrusel = () => {
-  const {peliculas, totalPages} = useFetchPeliculas("now_playing");
+  const { peliculas, totalPages } = useFetchPeliculas("now_playing");
 
   return (
     <Box>
@@ -28,35 +28,48 @@ const Carrusel = () => {
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
               height: "60vh",
-              display: "flex",
-              flexDirection: "column-reverse",
+              display: "flex !important",       
+              flexDirection: "column !important",
+              alignContent: "center !important",
+              justifyContent: "flex-end !important",
+              alignItems: "center !important"
             }}
           >
             <Box
               sx={{
-                width: "50%",
-                heigth: "500px",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-                px: 50,
-                py: 50,
+                maxWidth: 950,
+                display: "flex !important",
+                flexDirection: "column !important",
+                alignItems: "center !important ",
+                m: 1,
+                p: 3,
                 textAlign: "center",
                 opacity: [0.5, 0.5, 0.5],
-                bgcolor: "transparent",
+                bgcolor:"#FFFFFF"
               }}
             >
-              <Card sx={{ color: "text.primary" }}>
-                <Typography sx={{fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';"}}
-                variant="h5" component="div">
+              <Box sx={{ color: "text.primary"
+             }}>
+                <Typography
+                  sx={{
+                    fontFamily:
+                      "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';",
+                  }}
+                  variant="h5"
+                  component="div"
+                >
                   {pelicula.title}
                 </Typography>
                 <Typography
                   variant="h6"
                   sx={{
-                    fontSize: 16,
-                    fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';",
+                    fontSize: {
+                      xs: "10px",
+                      sm: "12px",
+                      md: "16px",
+                    },
+                    fontFamily:
+                      "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';",
                     fontWeight: "500",
                   }}
                   color="text.secondary"
@@ -79,7 +92,7 @@ const Carrusel = () => {
                     Ver mas...
                   </Button>
                 </Link>
-              </Card>
+              </Box>
             </Box>
           </Box>
         ))}
