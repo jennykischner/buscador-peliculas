@@ -27,11 +27,11 @@ const Carrusel = () => {
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
               height: "60vh",
-              display: "flex !important",       
+              display: "flex !important",
               flexDirection: "column !important",
               alignContent: "center !important",
               justifyContent: "flex-end !important",
-              alignItems: "center !important"
+              alignItems: "center !important",
             }}
           >
             <Box
@@ -44,11 +44,10 @@ const Carrusel = () => {
                 p: 3,
                 textAlign: "center",
                 opacity: [0.5, 0.5, 0.5],
-                bgcolor:"#FFFFFF"
+                bgcolor: "#FFFFFF",
               }}
             >
-              <Box sx={{ color: "text.primary"
-             }}>
+              <Box sx={{ color: "text.primary" }}>
                 <Typography
                   sx={{
                     fontFamily:
@@ -81,9 +80,15 @@ const Carrusel = () => {
                   <Button
                     sx={{
                       bgcolor: "#424242",
-                      ":hover": { bgcolor: "#424242" },
+                      ":hover": {
+                        bgcolor: "#bdbdbd",
+                        color: "#424242",
+                        boxShadow: 4,
+                      },
                       borderColor: "#424242",
                       display: "inline-block",
+                      fontFamily:
+                        "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';",
                     }}
                     size="small"
                     variant="contained"
