@@ -132,28 +132,46 @@ const DetallePelicula = () => {
             >
               Géneros:
             </Typography>
-
-            {peliculaDetalle.genres &&
-              peliculaDetalle.genres.map((genre) => (
-                <Typography
-                  variant="subtitle1"
-                  color="white"
-                  sx={{
-                    pt: 3,
-                    textAlign: "justify",
-                    fontWeight: 300,
-                    fontSize: {
-                      xs: "15px",
-                      sm: "20px",
-                      md: "20px",
-                    },
-                    fontFamily:
-                      "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';",
-                  }}
-                >
-                  {genre.name}
-                </Typography>
-              ))}
+            <Box sx={{ 
+              display: "flex", 
+              flexWrap: "wrap",
+              }}>
+              {peliculaDetalle.genres &&
+                peliculaDetalle.genres.map((genre) => (
+                  <Typography
+                    variant="subtitle1"
+                    color="white"
+                    sx={{
+                      pt: 3,
+                      textAlign: "justify",
+                      fontWeight: 300,
+                      px: "8px",
+                      py: "4px",
+                      textAling: "justify",
+                      mr: "10px",
+                      mt: "10px",
+                      borderRadius: 4,
+                      border: "1px solid",
+                      ":hover": {
+                        fontWeight: 500,
+                        bgcolor: "#bdbdbd",
+                        color: "#000000",
+                        boxShadow: 3,
+                        border: 1
+                      },  
+                      fontSize: {
+                        xs: "15px",
+                        sm: "20px",
+                        md: "20px",
+                      },
+                      fontFamily:
+                        "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';",
+                    }}
+                  >
+                    {genre.name}
+                  </Typography>
+                ))}
+            </Box>
           </CardContent>
         </Box>
       </Card>
