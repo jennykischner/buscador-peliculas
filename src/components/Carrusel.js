@@ -1,5 +1,4 @@
 import Box from "@mui/material/Box";
-import Card from "@mui/material/Card";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Slider from "react-slick";
@@ -15,7 +14,7 @@ const Carrusel = () => {
     <Box>
       <Slider
         dots={true}
-        arrows={true}
+        arrows={false}
         slidesToShow={1}
         autoplay={true}
         autoplaySpeed={3500}
