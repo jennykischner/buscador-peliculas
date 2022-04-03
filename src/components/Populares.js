@@ -36,10 +36,19 @@ const Populares = () => {
     >
       <Typography
         sx={{
-          bgcolor: "#424242",
-          color: "white",
+          color: "#424242",
+          fontFamily:
+            "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';",
+          ml: 4,
+          textAlign: "center",
+          ":hover": {
+            bgcolor: "#bdbdbd",
+            color: "#FFFFFF",
+            boxShadow: 2,
+            border: 1
+          },
         }}
-        variant="h5"
+        variant="h4"
         gutterBottom
         component="div"
       >
@@ -49,12 +58,12 @@ const Populares = () => {
       <Box
         sx={{
           display: "flex",
-            marginTop: 10,
-            alignItems: "center",
-            justifyContent: "center",
-            borderRadius: 1,
-            textAlign: "center",
-            flexWrap: "wrap"
+          marginTop: 10,
+          alignItems: "center",
+          justifyContent: "center",
+          borderRadius: 1,
+          textAlign: "center",
+          flexWrap: "wrap",
         }}
       >
         {peliculas.map((pelicula) => (
