@@ -16,12 +16,14 @@ const Footer = () => {
         height: 80,
         position: "absolute",
         bottom: 0,
-        width: "100%"
+        width: "100%",
       }}
     >
       <Typography
         sx={{
           color: "white",
+          fontFamily:
+            "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';",
         }}
         variant="h6"
         component="div"
@@ -32,25 +34,46 @@ const Footer = () => {
       <IconButton
         target="_black"
         href="https://github.com/jennykischner/buscador-peliculas"
-        sx={{ color: "white"}}
+        sx={{
+          color: "white",
+          ":hover": {
+            bgcolor: "#FFFFFF",
+            color: "#000000",
+            boxShadow: 2,
+          },
+        }}
       >
-        <GitHubIcon fontSize='medium' ></GitHubIcon>
+        <GitHubIcon fontSize="medium"></GitHubIcon>
       </IconButton>
 
       <IconButton
         target="_black"
         href="https://www.linkedin.com/in/jennifer-erica-kischner-45000b166/"
-        sx={{ color: "white" }}
+        sx={{
+          color: "white",
+          ":hover": {
+            bgcolor: "#FFFFFF",
+            color: "#000000",
+            boxShadow: 2,
+          },
+        }}
       >
-        <LinkedInIcon fontSize='medium' ></LinkedInIcon>
+        <LinkedInIcon fontSize="medium"></LinkedInIcon>
       </IconButton>
 
       <IconButton
         target="_black"
         href="mailto:kischnerjennifer@gmail.com"
-        sx={{ color: "white" }}
+        sx={{
+          color: "white",
+          ":hover": {
+            bgcolor: "#FFFFFF",
+            color: "#000000",
+            boxShadow: 2,
+          },
+        }}
       >
-        <EmailIcon  fontSize='medium'></EmailIcon>
+        <EmailIcon fontSize="medium"></EmailIcon>
       </IconButton>
     </Box>
   );
