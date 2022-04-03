@@ -52,7 +52,7 @@ const DetallePelicula = () => {
                   bgcolor: "#424242",
                   color: "#FFFFFF",
                   boxShadow: 10,
-                  borderRadius:4
+                  borderRadius: 4,
                 },
                 display: {
                   xs: "none",
@@ -138,10 +138,12 @@ const DetallePelicula = () => {
             >
               Géneros:
             </Typography>
-            <Box sx={{ 
-              display: "flex", 
-              flexWrap: "wrap",
-              }}>
+            <Box
+              sx={{
+                display: "flex",
+                flexWrap: "wrap",
+              }}
+            >
               {peliculaDetalle.genres &&
                 peliculaDetalle.genres.map((genre) => (
                   <Typography
@@ -163,8 +165,8 @@ const DetallePelicula = () => {
                         bgcolor: "#FFFFFF",
                         color: "#000000",
                         boxShadow: 3,
-                        border: 1
-                      },  
+                        border: 1,
+                      },
                       fontSize: {
                         xs: "15px",
                         sm: "20px",
