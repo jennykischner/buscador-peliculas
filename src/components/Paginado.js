@@ -26,6 +26,14 @@ const Paginado = ({
       }}
     >
       <IconButton
+        sx={{
+          color: "#424242",
+          ":hover": {
+            bgcolor: "#bdbdbd",
+            color: "#FFFFFF",
+            boxShadow: 2,
+          },
+        }}
         aria-label="volver a primer pagina"
         onClick={handleClickFirstPage}
         disabled={page === 1}
@@ -33,6 +41,14 @@ const Paginado = ({
         <SkipPreviousIcon />
       </IconButton>
       <IconButton
+        sx={{
+          color: "#424242",
+          ":hover": {
+            bgcolor: "#bdbdbd",
+            color: "#FFFFFF",
+            boxShadow: 2,
+          },
+        }}
         aria-label="pagina anterior"
         onClick={handleClickPrev}
         disabled={page === 1}
@@ -40,9 +56,29 @@ const Paginado = ({
         <ArrowBackIosIcon />
       </IconButton>
 
-      <Typography variant="h5" gutterBottom component="div" sx={{ m: 2 }}> Página: {page}</Typography>
+      <Typography
+        variant="h5"
+        gutterBottom
+        component="div"
+        sx={{
+          m: 2,
+          fontFamily:
+            "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';",
+        }}
+      >
+        {" "}
+        Página: {page}
+      </Typography>
 
       <IconButton
+        sx={{
+          color: "#424242",
+          ":hover": {
+            bgcolor: "#bdbdbd",
+            color: "#FFFFFF",
+            boxShadow: 2,
+          },
+        }}
         aria-label="pagina siguiente"
         onClick={handleClickNext}
         disabled={totalPages > 500 ? page === 500 : page === totalPages}
@@ -50,9 +86,18 @@ const Paginado = ({
         <ArrowForwardIosIcon />
       </IconButton>
       <IconButton
+        sx={{
+          color: "#424242",
+          ":hover": {
+            bgcolor: "#bdbdbd",
+            color: "#FFFFFF",
+            boxShadow: 2,
+          },
+        }}
         aria-label="ir a ultima pagina"
-        onClick={() => handleClickUltimaPagina(totalPages> 500 ? 500 : totalPages)}
-     
+        onClick={() =>
+          handleClickUltimaPagina(totalPages > 500 ? 500 : totalPages)
+        }
       >
         <SkipNextIcon />
       </IconButton>
