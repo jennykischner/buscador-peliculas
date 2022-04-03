@@ -36,10 +36,18 @@ const ItemListadoPeliculas = ({ titulo, imagen, id }) => {
         <ListItem alingItems="flex-start">
           <ListItemAvatar>
             <Avatar
+              sx={{
+                border: 0,
+                borderRadius: 5,
+                ":hover": {
+                  boxShadow: 6,
+                },
+              }}
               alt={`Imagen de la Película`}
               src={`https://image.tmdb.org/t/p/w300/${imagen}`}
             />
           </ListItemAvatar>
+
           <ListItemText>{titulo}</ListItemText>
 
           <Link to={`/detalle-pelicula/${id}`}>
@@ -57,6 +65,7 @@ const ItemListadoPeliculas = ({ titulo, imagen, id }) => {
             </IconButton>
           </Link>
         </ListItem>
+
         <Divider variant="inset" component="li"></Divider>
       </List>
     </Box>

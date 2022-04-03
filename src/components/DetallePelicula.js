@@ -48,6 +48,12 @@ const DetallePelicula = () => {
               sx={{
                 width: "300px",
                 height: "400px",
+                ":hover": {
+                  bgcolor: "#424242",
+                  color: "#FFFFFF",
+                  boxShadow: 10,
+                  borderRadius:4
+                },
                 display: {
                   xs: "none",
                   sm: "none",
@@ -154,7 +160,7 @@ const DetallePelicula = () => {
                       border: "1px solid",
                       ":hover": {
                         fontWeight: 500,
-                        bgcolor: "#bdbdbd",
+                        bgcolor: "#FFFFFF",
                         color: "#000000",
                         boxShadow: 3,
                         border: 1
