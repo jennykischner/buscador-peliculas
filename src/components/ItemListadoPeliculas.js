@@ -21,7 +21,6 @@ const ItemListadoPeliculas = ({ titulo, imagen, id }) => {
           sm: "80%",
           md: "100%",
         },
-        
       }}
     >
       <List
@@ -31,8 +30,7 @@ const ItemListadoPeliculas = ({ titulo, imagen, id }) => {
             xs: "320px",
             sm: "400px",
             md: "450px",
-          }
-
+          },
         }}
       >
         <ListItem alingItems="flex-start">
@@ -45,7 +43,16 @@ const ItemListadoPeliculas = ({ titulo, imagen, id }) => {
           <ListItemText>{titulo}</ListItemText>
 
           <Link to={`/detalle-pelicula/${id}`}>
-            <IconButton>
+            <IconButton
+              sx={{
+                color: "#424242",
+                ":hover": {
+                  bgcolor: "#424242",
+                  color: "#FFFFFF",
+                  boxShadow: 2,
+                },
+              }}
+            >
               <ArrowForwardIosIcon></ArrowForwardIosIcon>
             </IconButton>
           </Link>
