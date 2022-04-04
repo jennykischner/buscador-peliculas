@@ -22,6 +22,7 @@
  - Paginado: Las secciones cuentan con un paginado (a excepción del Home)
  - Detalle de Películas: Al hacer click en las tarjetas de cada sección nos muestra un detalle de la misma. 
  
+ 
 ⋆ Diseño responsivo:
  
  - Smartphone 
