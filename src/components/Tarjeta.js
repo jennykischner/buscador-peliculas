@@ -30,12 +30,12 @@ const Tarjeta = ({ titulo, imagen, linkTarjeta }) => {
       <CardContent>
         <Typography
           gutterBottom
-          variant="h8"
+          variant="h6"
           component="div"
           sx={{
             width: 200,
             whiteSpace: "nowrap",
-            textOverFlow: "ellipsis",
+            textOverflow: "ellipsis",
             overflow: "hidden",
             textAling: "center",
             fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
