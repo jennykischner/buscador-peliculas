@@ -12,7 +12,7 @@
 
 ### Website 
 
-[Mira aquí mi Búscador de Películas](https://portfoliojenniferkischner.netlify.app) 
+[Mira aquí mi Búscador de Películas](https://jennykischner.github.io/buscador-peliculas/) 
 
 
 ### Funcionalidad
@@ -39,7 +39,7 @@
  - ✔ Material UI
  - ✔ Api Rest
  - ✔ GIT
- - ✔ Deploy en NETLIFY  
+ - ✔ Deploy en GITHUB
 
 
 ⋆ Recursos:
