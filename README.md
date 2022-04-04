@@ -1,5 +1,7 @@
 
-<img src="https://i0.wp.com/caigaquiencaiga.net/wp-content/uploads/2021/12/catalogo-oculto-netflix.jpg?fit=474%2C284&ssl=1"">
+
+<img src="https://i0.wp.com/caigaquiencaiga.net/wp-content/uploads/2021/12/catalogo-oculto-netflix.jpg?fit=474%2C284&ssl=1">
+
 
 
 ### ★ Proyecto: Búscador de Peliculas 
