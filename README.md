@@ -1,4 +1,4 @@
-<img src="../Foto_Readme.jpeg">
+<img src="../Foto_Readme.jpg">
 
 ### ★ Proyecto: Búscador de Peliculas 
 
