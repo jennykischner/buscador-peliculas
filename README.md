@@ -1,8 +1,7 @@
-# Getting Started with Create React App
+<img src="../Foto_Readme.jpeg">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Búscador de Peliculas 
 
-## Available Scripts
 
 In the project directory, you can run:
 
