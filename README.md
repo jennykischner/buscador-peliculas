@@ -10,7 +10,7 @@
 
 ### Website 
 
-[Mira aquí mi Búscador de Películas](https://jennykischner.github.io/buscador-peliculas/) 
+[Mira aquí mi Búscador de Películas](https://buscadorpeliculaskischnerjenny.netlify.app/) 
 
 
 ### Funcionalidad
