@@ -1,5 +1,5 @@
 
-<img src="https://cloudfront-eu-central-1.images.arcpublishing.com/diarioas/YXVPX2BXT5JHNAWUHZ64MJ4KMY.jpg>
+<img src="https://cloudfront-eu-central-1.images.arcpublishing.com/diarioas/YXVPX2BXT5JHNAWUHZ64MJ4KMY.jpg">
 
 
 ### ★ Proyecto: Búscador de Peliculas 
