@@ -4,6 +4,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import ItemListadoPeliculas from "./ItemListadoPeliculas";
 
+
 const Listados = ({ titulo, url, Link }) => {
   const [listaPeliculas, setListaPeliculas] = useState([]);
   useEffect(() => {
@@ -12,7 +13,7 @@ const Listados = ({ titulo, url, Link }) => {
     )
       .then((res) => res.json())
       .then((data) => setListaPeliculas(data.results));
-  }, []);
+  }, [url]);
 
   return (
     <Box sx={{m: 2}}>

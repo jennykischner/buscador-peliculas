@@ -13,7 +13,7 @@ const useFetchPeliculas = ( endpointFetch, page ) => {
           setPeliculas(data.results);
           setTotalPages(data.total_pages)
         });
-    }, [page]);
+    }, [page, endpointFetch]);
   
     return {
       peliculas: peliculas, 

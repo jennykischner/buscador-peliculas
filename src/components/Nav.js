@@ -48,7 +48,7 @@ const Nav = () => {
             sx={{
               display: "flex",
               flexWrap: "wrap",
-              display: {
+              Display: {
                 xs: "none",
                 sm: "none",
                 md: "inline",
