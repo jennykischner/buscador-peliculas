@@ -9,10 +9,11 @@ import MenuDesplegable from "./MenuDesplegable";
 
 const Nav = () => {
   return (
-    <Box sx={{
-      display: "flex",
-     
-    }}>
+    <Box
+      sx={{
+        display: "flex",
+      }}
+    >
       <AppBar position="fixed" sx={{ bgcolor: "#282828" }}>
         <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
           <Box sx={{ display: "flex", flexDirection: "row" }}>
@@ -21,14 +22,16 @@ const Nav = () => {
               edge="start"
               color="inherit"
               aria-label="menu"
-              sx={{ mr: 2, mt: 1, fontSize:{
-                xs: "16px",
-                sm: "20px",
-                md: "30px",} }}
-            
-            >
-        
-            </LocalActivityIcon>
+              sx={{
+                mr: 2,
+                mt: 1,
+                fontSize: {
+                  xs: "16px",
+                  sm: "20px",
+                  md: "30px",
+                },
+              }}
+            ></LocalActivityIcon>
             <Typography
               component="div"
               sx={{
@@ -46,9 +49,7 @@ const Nav = () => {
 
           <Box
             sx={{
-              display: "flex",
-              flexWrap: "wrap",
-              Display: {
+              display: {
                 xs: "none",
                 sm: "none",
                 md: "inline",
@@ -89,18 +90,18 @@ const Nav = () => {
               </Link>
             </Button>
           </Box>
-       
-        <Box
-          sx={{
-            display: {
-              xs: "inline",
-              sm: "inline",
-              md: "none",
-            },
-          }}
-        >
-          <MenuDesplegable />
-        </Box>
+
+          <Box
+            sx={{
+              display: {
+                xs: "inline",
+                sm: "inline",
+                md: "none",
+              },
+            }}
+          >
+            <MenuDesplegable />
+          </Box>
         </Toolbar>
       </AppBar>
     </Box>
