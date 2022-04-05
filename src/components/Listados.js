@@ -12,7 +12,7 @@ const Listados = ({ titulo, url, Link }) => {
     )
       .then((res) => res.json())
       .then((data) => setListaPeliculas(data.results));
-  }, []);
+  }, [url]);
 
   return (
     <Box sx={{m: 2}}>

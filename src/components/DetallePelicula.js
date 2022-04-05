@@ -19,7 +19,7 @@ const DetallePelicula = () => {
       .then((data) => {
         setPeliculaDetalle(data);
       });
-  }, []);
+  }, [params.idPelicula]);
 
   return (
     <Box
