@@ -1,7 +1,5 @@
 
-
-<img src="https://i0.wp.com/caigaquiencaiga.net/wp-content/uploads/2021/12/catalogo-oculto-netflix.jpg?fit=474%2C284&ssl=1" width="80%">
-
+<img src="https://cloudfront-eu-central-1.images.arcpublishing.com/diarioas/YXVPX2BXT5JHNAWUHZ64MJ4KMY.jpg>
 
 
 ### ★ Proyecto: Búscador de Peliculas 
@@ -39,7 +37,7 @@
  - ✔ Material UI
  - ✔ Api Rest
  - ✔ GIT
- - ✔ Deploy en GITHUB
+ - ✔ Deploy en NETLIFY  
 
 
 ⋆ Recursos:
