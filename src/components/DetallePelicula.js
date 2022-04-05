@@ -38,7 +38,15 @@ const DetallePelicula = () => {
           boxShadow: "none",
           display: "flex",
           alignItems: "center",
-          px: 16,
+          px: {
+            md: 12,
+            lg: 16,
+          },
+          mt: {
+            xs: 3,
+            sm: 6,
+            md: 0,
+          },
         }}
       >
         <Box sx={{ display: "flex" }}>
@@ -63,7 +71,16 @@ const DetallePelicula = () => {
               image={`https://image.tmdb.org/t/p/original/${peliculaDetalle.poster_path}`}
             ></CardMedia>
           </Box>
-          <CardContent>
+          <CardContent
+            sx={{
+              ml: 6,
+              m: {
+                xs: 3,
+                sm: 8,
+                md: 2,
+              },
+            }}
+          >
             <Box sx={{ display: "flex", alignItems: "flex-end" }}>
               <Typography
                 color="white"
@@ -71,8 +88,8 @@ const DetallePelicula = () => {
                   lineHeight: "initial",
                   fontSize: {
                     xs: "20px",
-                    sm: "40px",
-                    md: "40px",
+                    sm: "34px",
+                    md: "34px",
                   },
                 }}
               >
@@ -85,11 +102,6 @@ const DetallePelicula = () => {
                   color: "white",
                   fontWeight: 500,
                   pl: 2,
-                  fontSize: {
-                    xs: "20px",
-                    sm: "30px",
-                    md: "30px",
-                  },
 
                   fontFamily:
                     "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';",
@@ -106,11 +118,6 @@ const DetallePelicula = () => {
                 pt: 3,
                 textAlign: "justify",
                 fontWeight: 400,
-                fontSize: {
-                  xs: "15px",
-                  sm: "20px",
-                  md: "20px",
-                },
 
                 fontFamily:
                   "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';",
@@ -126,11 +133,6 @@ const DetallePelicula = () => {
                 pt: 3,
                 textAlign: "justify",
                 fontWeight: 400,
-                fontSize: {
-                  xs: "20px",
-                  sm: "15px",
-                  md: "25px",
-                },
 
                 fontFamily:
                   "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';",
@@ -167,11 +169,7 @@ const DetallePelicula = () => {
                         boxShadow: 3,
                         border: 1,
                       },
-                      fontSize: {
-                        xs: "15px",
-                        sm: "20px",
-                        md: "20px",
-                      },
+
                       fontFamily:
                         "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';",
                     }}
