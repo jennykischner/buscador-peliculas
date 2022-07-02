@@ -31,6 +31,7 @@ const Footer = () => {
         Hecho por Jenny Kischner
       </Typography>
 
+      {/* Recordá que siempre que tengas un icono en un boton o link, sin texto, tenes que agregar aria-label para el lector de pantalla */}
       <IconButton
         target="_black"
         href="https://github.com/jennykischner/buscador-peliculas"

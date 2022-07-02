@@ -4,7 +4,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import ItemListadoPeliculas from "./ItemListadoPeliculas";
 
-
+// no usas Link, asi que no deberias pasar esa prop
 const Listados = ({ titulo, url, Link }) => {
   const [listaPeliculas, setListaPeliculas] = useState([]);
   useEffect(() => {
@@ -16,7 +16,7 @@ const Listados = ({ titulo, url, Link }) => {
   }, [url]);
 
   return (
-    <Box sx={{m: 2}}>
+    <Box sx={{ m: 2 }}>
       <Box
         sx={{
           bgcolor: "#424242",
@@ -26,7 +26,6 @@ const Listados = ({ titulo, url, Link }) => {
           alignItems: "center",
           justifyContent: "center",
           borderRadius: 1,
-
         }}
       >
         <Typography
@@ -39,7 +38,6 @@ const Listados = ({ titulo, url, Link }) => {
             },
           }}
           variant="h5"
-        
           component="div"
         >
           {titulo}

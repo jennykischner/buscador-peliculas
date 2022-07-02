@@ -14,9 +14,11 @@ const Buscar = () => {
     query: "",
   });
   useEffect(() => {
+    // aca podrias usar las variables que tenes en auxiliares
     fetch(
       `https://api.themoviedb.org/3/search/movie?api_key=c7e318bc4679faa16a6f940e1435e019&languaje=en-EN&query=${searchParams.get(
         "query"
+        // estaria bueno agregar un paginado aca
       )}&page=1`
     )
       .then((res) => res.json())
@@ -27,6 +29,9 @@ const Buscar = () => {
     setValorDelInput(e.target.value);
   };
 
+  // como esto es un click, y el textField no esta rodeado de un <form>, el buscador solo funciona
+  // haciendo click en "buscar" y no cuando aprieto enter en el input
+  // agrega una etiqueta form y pone esto mismo en un handle submit para mejorar el comportamiento
   const handleClick = () => {
     setSearchParams({
       query: valorDelInput,
@@ -35,6 +40,7 @@ const Buscar = () => {
 
   return (
     <Box sx={{ marginTop: 15 }}>
+      {/* Este componente se ve feo en mobile, yo le daria flex-direction column en menos de 600px de pantalla */}
       <Box
         sx={{
           marginTop: 15,
