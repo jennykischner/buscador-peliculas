@@ -13,6 +13,7 @@ const DetallePelicula = () => {
 
   useEffect(() => {
     fetch(
+      // usa tus variables auxiliares!
       `https://api.themoviedb.org/3/movie/${params.idPelicula}?api_key=96357f7f10ae428b53766292b46e8b8e&language=es-ES`
     )
       .then((res) => res.json())
@@ -68,6 +69,7 @@ const DetallePelicula = () => {
                   md: "inline",
                 },
               }}
+              // mismo priblema aca: si la imagen no viene de la api esto se ve roto
               image={`https://image.tmdb.org/t/p/original/${peliculaDetalle.poster_path}`}
             ></CardMedia>
           </Box>

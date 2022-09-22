@@ -43,6 +43,7 @@ const ItemListadoPeliculas = ({ titulo, imagen, id }) => {
                   boxShadow: 6,
                 },
               }}
+              // sintaxis preferible: alt="Imagen de la Película"
               alt={`Imagen de la Película`}
               src={`https://image.tmdb.org/t/p/w300/${imagen}`}
             />

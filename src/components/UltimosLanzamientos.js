@@ -4,11 +4,14 @@ import useFetchPeliculas from "../hook/useFetchPeliculas";
 import { Box } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import { useState } from "react";
+// no importes componentes que no vas a usar
+import Populares from "./Populares";
 
 const UltimosLanzamientos = () => {
   const [page, setPage] = useState(1);
   const { peliculas, totalPages } = useFetchPeliculas("now_playing", page);
 
+  // esto deberia estar en un hook aparte, ya que se repite en Populares. tambien te ayudaria a agregarlo en Buscar :)
   const handleClickFirstPage = () => {
     setPage(1);
   };
@@ -46,7 +49,7 @@ const UltimosLanzamientos = () => {
             bgcolor: "#bdbdbd",
             color: "#FFFFFF",
             boxShadow: 2,
-            border:1,
+            border: 1,
           },
         }}
         variant="h4"
